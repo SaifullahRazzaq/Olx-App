@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+        <html lang="en">
+            <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"> 
+  
+<style>
+    .logo
+{
+    background-color: dodgerblue;
+    border: 2px solid dodgerblue;
+    color: white;
+}
+
+.logo button
+{
+  float: right;
+}
+.logo img
+{
+  float:left;
+}
+</style>
+        
+</head>
+<body>
+    <div class="logo">
+        <h3 class="text-center">Add Product
+            <button class=" btn btn-info" onClick="logout()">Logout</button>
+            <a href="../Pages/ProductAds.html">ProductAds</a>  
+        </h3>
+    </div>
+    </div>
+    <div class=" col-md-8 col-md-offset-2 text-left">
+        <br><br>
+     <div class="form-group">
+         <label for="exampleInputEmail1">Product ID</label>
+         <input type="email" class="form-control" id="pid" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        
+        
+        <div class="form-group">
+                <label for="exampleInputEmail1">Product Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter email">
+               </div>
+               
+
+               <div class="form-group">
+                    <label for="exampleInputEmail1">Product Price</label>
+                    <input type="text" class="form-control" id="price" aria-describedby="emailHelp" placeholder="Enter email">
+                   </div>
+                   
+               
+    
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Product Description</label>
+                    <input type="text" class="form-control" id="pdes" aria-describedby="emailHelp" placeholder="Enter email">
+                  </div>
+
+
+                  <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        <input id="img" type="file" class="form-control" name="name">
+                    </div>
+            
+                  <div class="form-group">
+                        <label for="sel1">Select list (select one):</label>
+                        <select class="form-control" id="pcat">
+                            <option></option>
+                            <option>Car</option>
+                            <option>Bike</option>
+                            <option>Cell Phone</option>
+                            <option>Laptop</option>
+                            <option>Tablet</option>
+                        </select>
+</div>
+
+                      <div class="col-md-12 text-right">
+                          <button type="submit" class="btn btn-info" onClick="savedata()">Add Product</button>
+                          
+                      </div>
+
+
+
+
+                      
+        <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>           
+        <script src="../js/product.js"></script>
+        <script src="../js/app.js"></script>
+    </body>
+    </html>

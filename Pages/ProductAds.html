@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Ads</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<style>
+        .logo
+    {
+        background-color: dodgerblue;
+        border: 2px solid dodgerblue;
+        color: white;
+    }
+    
+    .logo button
+    {
+      float: right;
+    }
+  #table {
+  border-collapse: collapse;
+}
+
+#table, th, td {
+  border: 2px solid black;
+   padding: 30px;
+  text-align: left;
+}
+    </style>
+
+
+</head>
+<body>
+    <div class="logo">
+        <h3 class="logo text-center">Product Ads
+        </h3>
+    </div>
+    <div id="tab"><br>
+<input class="form-control" type="text" id="myInput"  onkeyup="myFunction()"  placeholder="Search by Price" aria-label="Search">
+        <table id="table" style=" border: 2px solid black;">
+    
+            <tbody>
+                <tr id="bike">
+    
+                </tr>
+                </tbody>
+                
+            
+            
+            
+                
+                <thead>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Id</th>
+                            <th>Product Description</th>
+                            <th>Product Category</th>
+                            <th>Product Price</th>
+                        </tr>
+                    </thead>
+                  
+                        <thead>
+                                <tr id="car">
+                                    <th>Product Image</th>
+                                    <th>Product Id</th>
+                                    <th>Product Description</th>
+                                    <th>Product Category</th>
+                                    <th>Product Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="mobile">
+                                    
+                                </tr>
+                            </tbody>
+            
+
+
+                                <thead>
+                                        <tr>
+                                            <th>Product Image</th>
+                                            <th>Product Id</th>
+                                            <th>Product Description</th>
+                                            <th>Product Category</th>
+                                            <th>Product Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        
+                                        
+                                        <tr id="Laptop">
+                                        </tr>
+                                        </tbody>
+
+                                        <thead>
+                                            <tr>
+                                                    <th>Product Image</th>
+                                                    <th>Product Id</th>
+                                                    <th>Product Product Description</th>
+                                                    <th>Product Category</th>
+                                                    <th>Product Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr id="Tablet">
+                                                    
+                                                </tr>
+                                                </tbody>
+                                                
+                                                
+            
+            
+                                            </table>
+                                            
+                                            
+                                            
+                                        </div>
+                                            
+                                            
+                                            <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+                                            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+              <script src="../js/app.js"></script>
+              <script src="../js/Productads.js"></script>
+    
+            </body>
+</html>
+
+
+<script type="text/javascript">
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[4];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+</script>
